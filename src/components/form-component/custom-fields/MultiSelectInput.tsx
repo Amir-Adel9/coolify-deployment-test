@@ -96,7 +96,7 @@ export const MultiSelect = React.forwardRef<
     if (selectedValues.length === field.custom?.options.length) {
       handleClear()
     } else {
-      const allValues = field.custom?.options.map((option) => option.value)
+      const allValues = field.custom?.options.map((option) => option.value.toString())
       setSelectedValues(allValues || [])
       formData.setValue(field.name, allValues)
     }
